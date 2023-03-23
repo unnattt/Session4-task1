@@ -14,8 +14,6 @@ public class RayCastPitch : MonoBehaviour
     public LayerMask leftPitch;
     public LayerMask rightPitch;
 
-    
-
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
@@ -74,6 +72,8 @@ public class RayCastPitch : MonoBehaviour
         bat.transform.position = new Vector3(-0.109999999f, 0.31400001f, 9.52000046f);
         bat.transform.rotation = new Quaternion(0.0025905068f, 0.0110446848f, 0.228336141f, 0.973516345f);
     }
+
     
+
 }
 

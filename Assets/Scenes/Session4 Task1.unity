@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028346, g: 0.22571373, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2059,6 +2059,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4687136108921671140, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
   m_PrefabInstance: {fileID: 1863011333}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1839625635 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 9153271393359052059, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
+  m_PrefabInstance: {fileID: 1863011333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1839625640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839625634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2801f6b6ea4744db23ff1a99098973, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bat: {fileID: 1839625634}
+  swingForce: 2
+  batRb: {fileID: 1839625635}
 --- !u!1001 &1863011333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2070,48 +2090,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: MyBat 1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8250461402373225787, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.002
+      value: 0.002
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.333
+      value: 0.396
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.518
+      value: 9.387
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999357
+      value: 0.8292968
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.5364653
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.011344416
+      value: -0.13134775
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.08496778
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -65.797
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.3
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 9117658977046443134, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153271393359052059, guid: 7159f1bf36c0e49af9a6b82b37093502, type: 3}
+      propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

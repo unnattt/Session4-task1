@@ -6,6 +6,8 @@ public class BatsScripts : MonoBehaviour
 {
     public GameObject bat;
 
+
+
     public  void OnTriggerEnter(Collider other)
     {
         Debug.Log("working");
