@@ -6,15 +6,29 @@ public class RayCastPitch : MonoBehaviour
 {
     public GameObject pointer;
     public GameObject ball;
+    public GameObject bat;
 
     public RaycastHit hitting;
-    public LayerMask mask;
-     public LayerMask stumpsLayer; // the layer of the stumps object
-    private bool ballHitStumps = false; // flag to indicate if the ball has hit the stumps
+    LayerMask mask;
 
+    public LayerMask leftPitch;
+    public LayerMask rightPitch;
+
+    
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            mask = leftPitch;
+            RightBat();
+        }
+        else if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            mask = rightPitch;
+            leftBat();
+        }
+
         PathOfthorwnBall();
 
     }
@@ -30,7 +44,7 @@ public class RayCastPitch : MonoBehaviour
           
             if (Input.GetMouseButtonDown(0))
             {
-                pointer.transform.position = new Vector3(hitting.point.x, 0.025f, hitting.point.z);
+                pointer.transform.position = new Vector3(hitting.point.x, -0.0044f, hitting.point.z);
                 //Debug.Log(hitting.point);
 
                 // for thorwing ball at hittingPoints...
@@ -40,24 +54,26 @@ public class RayCastPitch : MonoBehaviour
                 //Generating obj of another scripts..and appling rigidbody of ballLauncher class to this gameobject.
                 BallLaunch Obj = any.GetComponent<BallLaunch>();
 
-                Obj.ThrownBall(hitting.point);
+                Obj.ThrownBall(hitting.point + Vector3.up * 3.01f);
                 //for destoring Ball after some time..
                 Destroy(any, 4f);
             }
         }
     }
-     void OnCollisionEnter(Collision collision)
+
+    public void RightBat()
     {
-        // check if the collision is with an object that is on the stumps layer
-        if (stumpsLayer == (stumpsLayer | (1 << collision.gameObject.layer)))
-        {
-            ballHitStumps = true;
-            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                rb.isKinematic = false; // turn off the kinematic property
-            }
-        }
+        bat.transform.position = new Vector3(0.112000003f, 0.303000003f, 9.52000046f);
+        bat.transform.rotation = new Quaternion(-0.0025905068f, 0.0110446848f, -0.228336141f, 0.973516345f);
+
+
     }
+
+    public void leftBat()
+    {
+        bat.transform.position = new Vector3(-0.109999999f, 0.31400001f, 9.52000046f);
+        bat.transform.rotation = new Quaternion(0.0025905068f, 0.0110446848f, 0.228336141f, 0.973516345f);
+    }
+    
 }
 
