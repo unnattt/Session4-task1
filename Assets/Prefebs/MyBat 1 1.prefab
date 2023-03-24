@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8250461402373225787}
   - component: {fileID: 1204182439483194499}
   - component: {fileID: 9153271393359052059}
+  - component: {fileID: 7379418322591235090}
   m_Layer: 0
   m_Name: MyBat 1 1
   m_TagString: Untagged
@@ -115,6 +116,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &7379418322591235090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4687136108921671140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b30b0217cc4e4324b1b5d8387286e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6233048085370863579
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,8 +30,4 @@ public class BallLaunch : MonoBehaviour
         //Destroy(ball, 2f);
     }
 
-    public void HitBall(Vector3 direction, float force) 
-    {
-        rb.AddForce(direction * force, ForceMode.Impulse);
-    }
 }
